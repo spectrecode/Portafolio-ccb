@@ -1,0 +1,736 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: black;
+}
+
+/*.container{
+	max-width: 1050px;
+}*/
+
+.intro{
+	background-image: url(../img/code.jpg);
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.intro:before {
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom right,rgba(1, 35, 56, 0.06),rgba(48, 76, 154, 0.48));
+/*  background-image: linear-gradient(to bottom right,#012338,rgba(175, 70, 20, 0.7));
+*/  /*background: linear-gradient(to bottom right,#012338,#453, rgba(175, 70, 20, 0.7));*/
+    /*background: linear-gradient(to bottom right,#01273e,rgba(138, 132, 5, 0.49));*/
+    /*background: linear-gradient(to bottom right,#010d5f,rgba(33, 140, 31, 0.49));*/
+    /*background-image: linear-gradient(to bottom right,#000900,rgba(255, 255, 255, 0.35));*/
+    /*opacity: .6; */
+}
+
+.pieDegrade{
+    background: linear-gradient(rgba(255, 255, 255, 0),black 87%);
+    height: 150px;
+    position: absolute;
+    bottom: -24px;
+    width: 100%;
+    left: 0;
+}
+
+.primerSlid {
+	background-image: url(../img/noche.jpg);
+    height: 125vh;
+    width: 100%;
+    background-size: cover;
+    background-position-y: -165px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.primerSlid:before{
+    content: "";
+    background: linear-gradient(black, rgba(255, 255, 255, 0)23%, rgba(255, 255, 255, 0)86%, black);
+    height: 125%;
+    /* width: 1110px; */
+    position: absolute;
+    /* top: 0; */
+    /* bottom: 0; */
+    left: 0;
+    right: 0;
+}
+
+.jumbo{
+	position: relative;
+	top: 20%;
+	background-color: transparent;
+	color: white;
+	z-index: 1;
+}
+
+.navfix{
+    background: linear-gradient(black 23%, rgba(22, 25, 62, 0.13));
+    position: fixed;
+    color: white;
+    z-index: 1;
+    width: 100%;
+     margin: auto; 
+    max-width: 1110px;
+    padding: 30px 80px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.botonCollapse{
+	color: white;
+	float: right;
+	padding-top: 5px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.menu{
+    color: white;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+.menuBox{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 21, 39, 0.66);
+    top: 0;
+    z-index: 999;
+    left: 0;
+}
+
+.gatoIcon{
+    margin-right: 80px;
+}
+
+.info{
+	height: 60%;
+    background-color: rgba(41, 42, 60, 0.53);
+    /* width: 100%; */
+    position: relative;
+    top: 180px;
+    color: #c5a31e;
+}
+
+.aboutMe{
+/*    bottom: 280px;
+*/    position: relative;
+}
+
+.colDer{
+	padding-left: 10%;
+	padding-top: 17%;
+}
+
+.colIzq, .colDer{
+}
+.colIzq{
+	padding-right: 10%;
+	padding-top: 3%;
+}
+
+.ego{
+	position: relative;
+/*	top: 340px;
+*/}
+
+@media screen and (min-width: 0px) and (max-width: 544px) {
+    [class*="colIzq"] {
+        padding: 20px 80px 0;
+    }
+    [class*="colDer"] {
+        padding: 30px 55px 0;    	
+    }
+}
+
+.skills{
+	background-image: url(../img/javascript.gif);
+	background-size: cover;
+	background-attachment: fixed;
+	height: 35vh;
+}
+
+.power{
+	height: 100vh;
+	color: red;
+}
+
+.power h3{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.gatoContenedor{
+	/*height: 500px;*/
+    margin: 20px auto;
+    /*max-width: 400px;*/
+}
+
+.logoContenedor{
+    margin: 40px auto;
+    height: 100%;
+    max-width: 900px;
+    left: 0;
+    right: 0;
+}
+
+.skill{
+	width: 105px;
+}
+
+.gatogrande{
+	position: absolute;
+    z-index: -2;
+    /*margin-left: 259px;*/
+}
+
+.cajaLogo{
+	position: relative;
+}
+
+@media screen and (min-width: 750px) and (max-width: 981px){
+    .power, .container{
+        max-width: 820px;
+    }
+}
+
+.line, .lineBotstrap, .lineJquery, .lineCss{
+    width: 55px;
+    height: 40px;
+    background-color: white;
+    background: black;
+    color: white;
+    position: absolute;
+    left: 105px;
+    bottom: 34px;
+    border: 2px solid white;
+    /* display: inline; */
+    text-align: center;
+    font-size: 22px;
+    border-radius: 5px;
+}
+
+.line:after, .lineCss:after, .lineBotstrap:after, .lineJquery:after, .lineJs:after{
+	width: 584%;
+    height: 13px;
+    transform: skewX(120deg);
+    position: absolute;
+    content: " ";
+    bottom: 0px;
+    z-index: -1;
+    left: 10px;
+    border-right: 6px solid red;
+    border-bottom: 3px solid red;
+}
+
+.line:after{
+    width: 300%;
+}
+
+.lineBotstrap{
+	left: 110px;
+}
+
+.lineBotstrap:after{
+    transform: skew(-65deg,22deg);
+    bottom: -30px;
+    width: 375%;
+    left: 35%;
+}
+
+.lineJquery, .lineJs{
+    bottom: 166px;
+    right: 38%;
+}
+
+.lineJquery:after, .lineJs:after{
+	width: 156%;
+    height: 99px;
+    left: -5px;
+    transform: none;
+    border-right: 0;
+    border-left: 3px solid red;
+    bottom: -58px;
+}
+
+.lineJs:after{
+    bottom: 52px;
+    border-left: 0;
+    width: 37%;
+    left: 28%;
+}
+
+.contenedor{
+    height: 359px;
+    width: 95%;
+    position: absolute;
+    top: 27px;
+    z-index: -1;
+    background-image: url(../img/matriz.gif);
+}
+
+.html, .css, .bootstrap, .cuatro{
+	width: 100%;
+    position: relative;
+    z-index: -2;
+}
+
+.html{
+    bottom: 94px;
+    background-color: #ad1951;
+    height: 89px;
+}
+
+.css{
+    background-color: #ff6033;
+    height: 114px;
+    bottom: 290px;
+}
+
+.bootstrap{
+    background-color: #fff29c;
+    height: 102px;
+    bottom: 505px;
+}
+
+.cuatro{
+    background-color: #8a0404;
+    height: 87px;
+    bottom: 693px;
+}
+
+.onCat, .offCat{
+	padding: 3px 8px;
+}
+
+.flaticon-toyger-cat:before, .flaticon-exotic-shorthair-cat:before {
+	margin: 0;
+	font-size: 25px;
+}
+
+.portafolio{
+	background-color: inherit;
+}
+
+hr{
+	background-color: white;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 2px;
+}
+
+.portafolio img{
+	-webkit-filter: grayscale(100%) blur(2px);
+	filter: grayscale(100%)blur(2px);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+
+.portafolio img:hover{
+	-webkit-filter: grayscale(0)blur(0);
+	filter: grayscale(0)blur(0);
+}
+
+.portafolio img{
+    -webkit-transition: all 300ms ease-in;
+    -ms-transition: all 300ms ease-in;
+    -moz-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+
+}
+
+.portafolio img:hover{
+    box-shadow: 0px 0px 100px #000000;
+    z-index: 2;
+    -webkit-transition: all 300ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 300ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 300ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 300ms ease-in;
+    transform: scale(1.1);
+}
+
+.contact{
+	background-image: url(../img/gato.jpg);
+	background-size: cover;
+	background-position-x:-240px; 
+	height: 65vh;
+}
+
+.puente{
+	background-image: url(../img/luna1.gif);
+    background-position-y: 160px;
+    height: 35vh;
+    background-attachment: fixed;
+    background-size: 20%;
+}
+
+footer img{
+    width: 2.5%;
+}
+
+footer{
+	color: white;
+    letter-spacing: -1.1px;
+    font-size: 14px;
+}
+
+
+/*}
+
+.fadeBotonLoad{
+	animation:uno ease-in 1;
+	animation-duration:3s;
+}
+@keyframes uno { from { opacity:0; } to { opacity:1; } }
+
+.fadeFirst{
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.fadeInDown{
+	animation:fadeIn ease-in 1;
+	animation-duration:1s;
+}
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.flechaAbajo{
+    display: block;
+    color: white;
+}
+
+.cajaCanvas a:hover{
+	color: transparent;
+}
+
+.flaticon-devon-rex-cat{
+	margin-left: -5px;
+}
+
+.intro{
+	height: 100vh;
+	background-image: url(../img/cuadro.gif);
+	background-size: cover;
+	width: 100%;	
+}
+
+/* seccion falsa/ navbar sticky*/
+
+/*button:focus {
+    outline: none;
+}
+
+.botonCollapse{
+	color: white;
+	float: right;
+}
+
+.container{
+	max-width: 990px;
+}
+
+.falsoSection{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+}
+
+.navfix{
+	position: fixed;
+	color: white;
+	z-index: 1;
+	width: 100%;
+}
+*/
+/* menu fixed*/
+
+/*[class^="flaticon-"]:before{
+	margin: 0;
+}
+
+.gatoIcon{
+	color: white;
+	float: right;
+	padding: 18px 2px;
+}
+
+.menu{
+    color: white;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+.menuBox{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 21, 39, 0.66);
+    top: 0;
+    z-index: 999;
+}
+*/
+/* primera seccion */
+
+/*h1{
+	font-size: 330%;
+}
+
+.imagenIntro{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, -0.7));
+	z-index: -1;
+}
+
+.jumbo{
+	position: relative;
+	top: 28%;
+	background-color: transparent;
+	color: white;
+}
+
+.primerSlid{
+	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, -0.7));
+	width: 100%;
+	position: relative;
+	height: 100vh;
+*//*	background-image: url(../img/javascript.gif);
+	background-size: cover;
+}
+
+@media (max-width: 780px){
+	.primerSlid{
+		background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, -0.3)), url(../img/code.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+
+}
+
+.videoPlay{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+}
+
+/* segundo section / cajaUp */
+
+/*.aboutMe{
+    bottom: 280px;
+    position: relative;
+
+}
+
+.cajaUp{
+    top: 0;
+}
+
+.colDer{
+	padding-left: 10%;
+	padding-top: 17%;
+}
+
+.colIzq, .colDer{
+	opacity: 0;
+}
+.colIzq{
+	padding-right: 10%;
+	padding-top: 3%;
+}
+
+.ego{
+	position: relative;
+	top: 340px;
+}
+
+.flechaArriba{
+	color: white;
+}
+
+.nombre{
+    text-shadow: 0px 0px 30px #f5f4f5;
+    font-size: 180%;
+    font-size: 40px;
+}
+
+.t-up{
+	position: absolute;
+}
+
+.segundoSlid{
+	background-color: #222831;
+	color: white;
+}
+
+.segundoSlid,.tercerSlid,.quintoSlid {
+	height: 100vh;
+	position: relative;
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 544px) {
+    [class*="colIzq"] {
+        padding: 20px 80px 0;
+    }
+    [class*="colDer"] {
+        padding: 30px 55px 0;    	
+    }
+}
+
+.tacha.borrar:after { 
+    display: none;
+}
+*/
+/* tercer section */
+/*.skills{
+    text-align: justify;
+    visibility: visible;
+    max-width: 450px;
+    margin: 200px auto;
+    font-size: 18px
+}
+
+.tacha{
+	position: relative;
+}
+
+.tacha::after {
+	border-bottom: 9px solid white;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 11px;
+    left: 0;
+}
+
+.tercerSlid{
+	background-color: black;
+	color: white;
+}
+*/
+/* cuarto section */
+
+/*.cuartoSlid{
+	background-color: #131313;
+	position: relative;
+	height: 100vh;
+	color: white;
+}
+*/
+/* quinto section */
+
+/*.quintoSlid{
+	background-color: white;
+	color: black;
+}
+
+.hoverAuto{
+	opacity: 0;
+    transition: opacity .6s cubic-bezier(0.645,.045,.355,1);
+}
+.contactame{
+	font-size: 50px;
+	padding-top;
+}
+
+.contenedorContactame{
+	margin: 100px auto;
+    width: 100%;
+    max-width: 700px;
+}
+
+.redes{
+	display: inline-block;
+	font-size: 30px;
+}
+
+.trabajos{
+	margin: 100px auto;
+    max-width: 500px;
+    text-align: center;
+    font-size: 18px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+}
+
+.contenedorTrabajos{
+	position: absolute;
+	width: 100%;
+}
+.pag{
+	display: inherit;
+}
+
+hr{
+	background-color: white;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 3px;
+}
+.imagenes{
+	    position: relative;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 1500px;
+    width: 100%;
+}
+.miniaturas{
+	position: relative;
+}
+.porta{
+	left: 105px;
+}
+.trello{
+	top: 100px;
+    right: 110px;
+}
+
+.user{
+	right: 105px;
+}
+
+.blog{
+	top: 100px;
+    left: 110px;
+    z-index: 1;
+}
+.eco{
+	top: 100px;
+	right: 183px;
+}
+.trelo{
+	top: 100px;
+	left: 183px;
+}*/
